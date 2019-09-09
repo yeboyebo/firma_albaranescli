@@ -3,8 +3,12 @@
         {
             "key": "baseparche",
             "version": "v1.0"
+        },
+        {
+            "key": "oficial",
+            "version": "v1.0"
         }
     ],
     "fk": "True",
-    "fun_aq": null
+    "fun_aq": "firma_albaranes"
 }
