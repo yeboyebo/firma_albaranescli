@@ -1,0 +1,45 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "groupBoxPadre": {
+            "componente": "YBGroupBox",
+            "className": "",
+            "style": {},
+            "layout": {
+                "recargarButton": {
+                    "componente": "YBButton",
+                    "title": "Refrescar",
+                    "label": "Refrescar",
+                    "prefix": "firmasdealbaranes",
+                    "icon": "refresh",
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "acctionRecargar",
+                        "success": [{"slot": "recargar"}]
+                    }
+                },
+                "labelPendiente": {
+                    "componente": "YBLabel",
+                    "text": "No hay nada que firmar refresca"
+                },
+                "firma": {
+                    "componente": "YBDraw",
+                    "prefix": "firmasdealbaranes",
+                    "function": "firmarAlbaran"
+                }
+            }
+        }
+    },
+    "acciones": {
+        "acctionRecargar": {
+            "action": "recargar"
+        }
+    },
+    "drawIf": {
+        "groupBoxPadre": {
+            "labelPendiente": "drawif_labelPendiente",
+            "firma": "drawif_firma"
+        }
+    }
+}

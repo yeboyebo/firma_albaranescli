@@ -9,9 +9,42 @@
             {
                 "path": "config/",
                 "name": "registros.json"
+            },
+            {
+                "path": "apps/facturacion/templates/facturacion/",
+                "name": "app_facturacion__menu_facturacion.json"
+            },
+            {
+                "path": "apps/portal/templates/portal/",
+                "name": "app_portal__menu_portal.json"
             }
         ],
-        "addFile": [],
+        "addFile": [
+            {
+                "path": "models/flfacturac/",
+                "name": "model_flfacturac__firmasdealbaranes.py"
+            },
+            {
+                "path": "models/flfacturac/",
+                "name": "model_flfacturac__firmasdealbaranes_def.py"
+            },
+            {
+                "path": "models/flfacturac/",
+                "name": "model_flfacturac__puestosdefirma.py"
+            },
+            {
+                "path": "models/flfacturac/",
+                "name": "model_flfacturac__puestosdefirma_def.py"
+            },
+            {
+                "path": "apps/facturacion/templates/facturacion/plantillas/",
+                "name": "app_facturacion__masterfirmasdealbaranes.json"
+            },
+            {
+                "path": "apps/facturacion/templates/facturacion/plantillas/",
+                "name": "app_facturacion__masterpuestosdefirma.json"
+            }
+        ],
         "patchScript": [],
         "replaceFile": [
             {

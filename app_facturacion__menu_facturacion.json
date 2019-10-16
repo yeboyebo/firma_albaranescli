@@ -1,0 +1,27 @@
+{
+    "modifications": [
+        {
+            "type": "insertAfterItem",
+            "path": "/items[root]",
+            "value": {
+                "NAME": "Puestos locales",
+                "TEXT": "Puestos locales",
+                "URL": "facturacion/puestosdefirma/master",
+                "ICON": "dashboard",
+                "COLOR": "rgb(30, 170, 30)",
+                "VISIBLE": false
+            }
+        },
+        {
+            "type": "insertAfterItem",
+            "path": "/items[Puestos locales]",
+            "value": {
+                "NAME": "firmadealbaranes",
+                "TEXT": "Firma",
+                "URL": "facturacion/firmasdealbaranes/master",
+                "ICON": "dashboard",
+                "COLOR": "rgb(240, 120, 20)"
+            }
+        }
+    ]
+}

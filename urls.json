@@ -1,3 +1,18 @@
 {
-    "modifications": []
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfacturac/agruparalbaranesprov",
+            "value": {
+                "firmasdealbaranes": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfacturac/firmasdealbaranes",
+            "value": {
+                "puestosdefirma": null
+            }
+        }
+    ]
 }

@@ -1,0 +1,43 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "masterGrid": {
+            "componente": "YBGrid",
+            "class": "claseGrid",
+            "label": "Puestos locales",
+            "prefix": "puestosdefirma",
+            "filter": "buscador",
+            "colorRowField": "rowColor",
+            "multiselectable": true,
+            "columns": [
+                {
+                    "tipo": "field",
+                    "listpos": "title",
+                    "key": "puesto",
+                    "width": 120
+                }
+            ],
+            "rowclick": "link",
+            "accionesGrid": [
+                {
+                    "tipo": "button",
+                    "key": "establecerPuesto",
+                    "label": "Establecer puesto",
+                    "success": [
+                        {
+                            "slot": "refrescar"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "acciones": {
+        "establecerPuesto": {
+            "action": "gridAction",
+            "prefix": "puestosdefirma",
+            "serverAction": "establecerPuesto"
+        }
+    }
+}
