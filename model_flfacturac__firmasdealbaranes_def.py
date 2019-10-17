@@ -19,6 +19,16 @@ class firma_albaranescli(interna):
     def firma_albaranescli_getDesc(self):
         return None
 
+    def firma_albaranescli_iniciaValoresLabel(self, model, template, cursor, data):
+        # if template == "form":
+        usuario = qsatype.FLUtil.nameUser()
+        params = self.dameAlbaranPorFirmar(usuario)
+        if "codigo" in params and params["codigo"]:
+            codigo = params["codigo"]
+            print("iniciaValoresLabel____codigo: ", codigo)
+            return {"codigoAlbaran": "Código albarán: {}".format(codigo)}
+        return {}
+
     def firma_albaranescli_firmarAlbaran(self, oParam):
         print(oParam["base64Img"])
         usuario = qsatype.FLUtil.nameUser()
@@ -76,10 +86,6 @@ class firma_albaranescli(interna):
             params["id"] = q.value("id")
             params["idalbaran"] = q.value("idalbaran")
             params["codigo"] = q.value("codigo")
-            print("firmado: ", params["firmado"])
-            print("id: ", params["id"])
-            print("idalbaran: ", params["idalbaran"])
-            print("codigo: ", params["codigo"])
         return params
 
     def __init__(self, context=None):
@@ -87,6 +93,9 @@ class firma_albaranescli(interna):
 
     def getDesc(self):
         return self.ctx.firma_albaranescli_getDesc()
+
+    def iniciaValoresLabel(self, model, template=None, cursor=None, data=None):
+        return self.ctx.firma_albaranescli_iniciaValoresLabel(model, template, cursor, data)
 
     def firmarAlbaran(self, oParam):
         return self.ctx.firma_albaranescli_firmarAlbaran(oParam)

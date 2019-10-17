@@ -23,6 +23,15 @@
                     "componente": "YBLabel",
                     "text": "No hay nada que firmar refresca"
                 },
+                "labelCodigoAlbaran": {
+                    "componente": "YBLabel",
+                    "text": "%yb1",
+                    "className": "floatingLabelLeft",
+                    "style": {
+                        "width": "100%"
+                    },
+                    "params": [{"type": "calc", "key": "codigoAlbaran"}]
+                },
                 "firma": {
                     "componente": "YBDraw",
                     "prefix": "firmasdealbaranes",
@@ -39,7 +48,8 @@
     "drawIf": {
         "groupBoxPadre": {
             "labelPendiente": "drawif_labelPendiente",
-            "firma": "drawif_firma"
+            "firma": "drawif_firma",
+            "labelCodigoAlbaran": "drawif_firma"
         }
     }
 }
