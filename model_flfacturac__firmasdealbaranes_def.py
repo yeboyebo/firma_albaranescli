@@ -12,7 +12,7 @@ class interna(qsatype.objetoBase):
 
 # @class_declaration firma_albaranescli #
 from YBLEGACY.constantes import *
-
+import base64
 
 class firma_albaranescli(interna):
 
@@ -39,9 +39,12 @@ class firma_albaranescli(interna):
             if curFirma.first():
                 curFirma.setModeAccess(curFirma.Edit)
                 curFirma.refreshBuffer()
-                firma = oParam["base64Img"].split(",")
-                imagen = firma[1]
-                print("firmarAlbaran___imagen: ", imagen)
+                data = oParam["base64Img"].split(",")[1]
+                imagen = base64.b64decode(data)
+                # firma = oParam["base64Img"].split(",")
+                # imagen = base64.b64decode(firma)
+                # imagen = firma[1]
+                # print("firmarAlbaran___imagen: ", imagen)
                 curFirma.setValueBuffer("firma", imagen)
                 curFirma.setValueBuffer("estado", "Aceptada")
             if not curFirma.commitBuffer():
