@@ -16,7 +16,7 @@
                     "buttonType": "raised",
                     "action": {
                         "key": "acctionRecargar",
-                        "success": [{"slot": "recargar"}]
+                        "success": [{"slot": "refrescar"}]
                     }
                 },
                 "labelPendiente": {
@@ -42,7 +42,8 @@
     },
     "acciones": {
         "acctionRecargar": {
-            "action": "recargar"
+            "action": "refrescar",
+            "prefix": "firmasdealbaranes"
         }
     },
     "drawIf": {

@@ -31,6 +31,7 @@ class firma_albaranescli(interna):
 
     def firma_albaranescli_firmarAlbaran(self, oParam):
         print(oParam["base64Img"])
+        resul = {}
         usuario = qsatype.FLUtil.nameUser()
         params = self.dameAlbaranPorFirmar(usuario)
         if "firmado" in params and not params["firmado"]:
@@ -79,7 +80,8 @@ class firma_albaranescli(interna):
         q.setTablesList(u"firmasdealbaranes")
         q.setSelect(u"id,idalbaran,codigo")
         q.setFrom(u"firmasdealbaranes")
-        q.setWhere(u"estado = 'Pendiente' AND puesto = '{}'".format(usuario))
+        q.setWhere(u"estado = 'Pendiente' AND puesto = '{}' AND firma is null".format(usuario))
+        print("Consulta____: ", q.sql())
 
         if not q.exec_():
             print("Error inesperado")
