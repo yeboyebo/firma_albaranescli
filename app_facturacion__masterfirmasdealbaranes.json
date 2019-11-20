@@ -42,7 +42,7 @@
     },
     "acciones": {
         "acctionRecargar": {
-            "action": "refrescar",
+            "action": "recargar",
             "prefix": "firmasdealbaranes"
         }
     },
